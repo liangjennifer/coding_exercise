@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Created by jliang1 on 10/12/17.
  *
@@ -16,19 +18,19 @@
 public class MissingNumber {
 
     public static int missingNumber(int[] nums) {
-        int previous = 0;
-        for (int i : nums) {
-            if (i - previous > 1)
-                return ++previous;
-            else
-                previous = i;
-        }
 
-        return 0;
+        Arrays.sort(nums);
+        return Math.max(nums[0] * nums[1] * nums[nums.length - 1], nums[nums.length - 1] * nums[nums.length - 2] * nums[nums.length - 3]);
+
+//        for (int i = 0; i < nums.length; i++){
+//            if (i != nums[i])
+//                return i;
+//        }
+//        return 0;
     }
 
     public static void main(String[] arg) {
-        int[] a = {0,1,2,3,5,6};
+        int[] a = {-2, -1, 4, 5, 6};
         System.out.println(MissingNumber.missingNumber(a));
     }
 }
