@@ -11,3 +11,19 @@
 **4. What are the different processors in JMeter?**
 
 **5. What is Thread Group and Sampler  in JMeter?**
+
+**6. What is Abstract class and Interface, when do you use either?**
+
+**7. what do you need to overwrite to compare if 2 objects are equal?**
+
+**8. When do you use comparitor ?  and why?  and how do you do it?**
+
+**9. ArrayList vs LinkedList.  When do you use each?  And why is it better to use ArrayList when doing lots of read?**
+
+**10. How do you make sure LinkedList is thread safe?**
+
+**11. Is HashSet thread safe?  what happens when you try to modify it ?  How do you make sure it's thread safe ? (answer : use ConcurrentHashSet)**
+
+**12. StringPool**
+
+
