@@ -1,5 +1,6 @@
-www.leetcode.com
-www.hackerthan.com
+https://leetcode.com/
+
+https://www.hackerrank.com/
 
 https://www.interviewbit.com/?ref=codelab
 
