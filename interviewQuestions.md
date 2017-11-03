@@ -27,3 +27,5 @@
 **12. StringPool**
 
 **13. Hashtable vs HashMap vs LinkedHashMap vs TreeMap.  How are they different and when do you use which.**
+
+**14. SQL Question : given an employee table, write sql query to return the 2nd highest salary**
