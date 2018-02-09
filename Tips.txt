@@ -1,0 +1,52 @@
+curl -XGET 'https://vpc-profilev2-qal-ifgui7efvfkfrnc4iw33f6i6gu.us-west-2.es.amazonaws.com/c360/_search?pretty'
+   10  curl -XPOST https://vpc-profilev2-qal-ifgui7efvfkfrnc4iw33f6i6gu.us-west-2.es.amazonaws.com/_bulk --data-binary @sudheer.json
+   14  curl -XPOST https://vpc-profilev2-qal-ifgui7efvfkfrnc4iw33f6i6gu.us-west-2.es.amazonaws.com/_bulk --data-binary @sudheer.json
+   16  curl -XPOST https://vpc-profilev2-qal-ifgui7efvfkfrnc4iw33f6i6gu.us-west-2.es.amazonaws.com/_bulk --data-binary @sudheer.json
+   21  curl -XPOST https://vpc-profilev2-qal-ifgui7efvfkfrnc4iw33f6i6gu.us-west-2.es.amazonaws.com/_bulk --data-binary @sudheer.json
+   24  curl -XGET 'https://vpc-profilev2-qal-ifgui7efvfkfrnc4iw33f6i6gu.us-west-2.es.amazonaws.com/relationships/goldidtest1
+   25  curl -XGET 'https://vpc-profilev2-qal-ifgui7efvfkfrnc4iw33f6i6gu.us-west-2.es.amazonaws.com/relationships/goldidtest1'
+   
+   https://vpc-profile-v2-qal-ingestion-niwm472fx4g6xzmf5em3f2r3wy.us-west-2.es.amazonaws.com
+   
+   
+curl -XPOST 'https://vpc-profilev2-qal-ifgui7efvfkfrnc4iw33f6i6gu.us-west-2.es.amazonaws.com/relationships/_search' -d '{"query": { "match_all": {} }}'
+curl -XPOST 'https://vpc-profile-qal-oswnjvqdqtec64ikwm2tucvxkm.us-west-2.es.amazonaws.com/relationships/_search' -d '{"from" : 0, "size" : 100,"query": { "match_all": {} }}'
+curl -XGET -H 'Content-Type: application/json' 'https://search-jliang-elasticsearch-3p53vq2kwbep3bhryv73dqoei4.us-west-2.es.amazonaws.com/profile/relationship/_search?pretty' -d '{"from" : 0, "size" : 100,"query": { "match_all": {} }}'
+
+Splunk server P99:
+index="api*" profile-aws.api.intuit.com| chart exactperc99(svcTimeMs)
+
+Splunk TPS:
+index="api*" xHost=profile-aws.api.intuit.com app="Intuit.platform.upsadmin.tariqadminclient" | timechart span=1s count as TPS | timechart span=30m max(TPS) as PEAK
+index="apigateway*" app="Intuit.tech.security.rss" | timechart span=1m count(index) AS TPM | eval TPS=TPM/60 | stats avg(TPS) as avgTPS, max(TPS) as peakTPS
+
+app="Intuit.platform.upstestsuite.upssuperclient"
+app="Intuit.platform.upstestsuite.upssuperclient" 
+
+index="api*" xHost=profile-aws.api.intuit.com method=GET | chart count over status
+index=apigateway-* xHost=profile-aws-prf.api.intuit.com status=200 |  chart exactperc99(svcTime) exactperc90(svcTime) exactperc50(svcTime)
+index="api*" xHost=profile-aws.api.intuit.com app="Intuit.platform.upsadmin.tariqadminclient" | chart exactperc90(svcTime)
+
+index=apigateway-* xHost=profile-aws-prf.api.intuit.com NOT routeInboundURI="intuit_hdr=cqa*" app="Intuit.platform.upstestsuite.upssuperclient"
+
+
+AppD:
+login : intuit-ss-dev
+        intuit-ss-prd
+        
+        
+
+================ elastic search ===============
+curl -XDELETE -H 'Content-Type: application/json' -k 'https://search-profile-v2-public-lrn-test-dpbl7h37kqu6dmh356crppxqga.us-west-2.es.amazonaws.com/profile'
+curl -XPOST -H 'Content-Type: application/json' 'https://search-profile-v2-public-lrn-test-dpbl7h37kqu6dmh356crppxqga.us-west-2.es.amazonaws.com/_bulk' --data-binary @jennifer.json
+curl -XPUT -H 'Content-Type: application/json' https://search-profile-v2-public-lrn-test-dpbl7h37kqu6dmh356crppxqga.us-west-2.es.amazonaws.com/profile/ -d @mapping.json
+curl -XGET https://search-profile-v2-public-lrn-test-dpbl7h37kqu6dmh356crppxqga.us-west-2.es.amazonaws.com/profile?pretty
+
+
+
+----------=====================
+Perf Portal:
+
+
+CTG load test this friday.
+1/18 supplimental load test
