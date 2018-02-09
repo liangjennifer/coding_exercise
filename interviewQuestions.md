@@ -28,6 +28,7 @@
 
 **13. Hashtable vs HashMap vs LinkedHashMap vs TreeMap.  How are they different and when do you use which.**
 
+
 **14. SQL Question : given an employee table, write sql query to return the 2nd highest salary**
 
 
@@ -41,3 +42,4 @@ Coding Exercise
 **3. Write a method to extract value out of json response. For example: get_value("sleep_time") or get_value("trending.style.time")**
 
 **4. write a function to transform data**
+=======

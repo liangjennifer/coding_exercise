@@ -8,17 +8,17 @@
  */
 public class IsPowerOf3 {
     public static boolean isPowerOfThree(int n) {
-        //return n>0 && (n==1 || (n%3==0 && isPowerOfThree(n/3)));
+        return n>0 && (n==1 || (n%3==0 && isPowerOfThree(n/3)));
 
-        double i = 0;
-        int c = 0;
-        while (i < n && i != n) {
-
-            i = (double) Math.pow((double)3, (double)c );
-            c++;
-        }
-
-        return i == n;
+//        double i = 0;
+//        int c = 0;
+//        while (i < n && i != n) {
+//
+//            i = (double) Math.pow((double)3, (double)c );
+//            c++;
+//        }
+//
+//        return i == n;
     }
 
     public static void main(String[] args) {

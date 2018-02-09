@@ -65,4 +65,9 @@ public class RomanToNumeral {
 
         return number;
     }
+
+    public static void main(String[] arg) {
+        RomanToNumeral r = new RomanToNumeral();
+        System.out.println(r.romanToInt("IIVVII"));
+    }
 }

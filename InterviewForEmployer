@@ -1,0 +1,32 @@
+Question to dev director:
+1. how do you feel about the release rigor right now?
+2. what is the organizational view on quality?  should it be specialized or should it be a mind set within all?
+3. how do you like to see quality and dev working together?
+4. have you heard about "shift left" ?  and what is your take?
+5. is the QA a gatekeeper or a tester?
+6. who has the most knowledge of the entire product?  QA or dev ?  should QA be the voice of customer?
+
+Question for the PM:
+  do you define requirements?  does engineering have input?
+2. how do you like the velocity of the team delivering the features?
+3. where do you see improvement?
+
+
+======
+1. how often is the release and what is the sign off criteria?  What role does QA play in signing off on the release readiness?
+2. Do you see QA as the final gate keeper of the quality?
+3. In your current organization, in your opinion, which between the QA and the dev has the overall domain expertise?
+   if dev, do you think QA should have stronger domain knowledge as the engineers have focus on the code.
+   if QA, great.
+
+4. when it comes to good quality product, who owns the responsibility ? is it QA or equal responsibility?
+5. In the industry, there is a trend of shifting left as you may have heard where developers take on most of the testing,
+   what is your view on that? is that the right model?  do you see that as a model that workday is going toward?
+6. Do you see in your organization, the QA and dev work together harmonious ?  do they work as a team that help each other to be successful
+   or QA vs Dev environment?
+
+
+======
+1. how do you find the balance between quality and time to market ?
+2. from your perspective, what are the challenges that the engineering team face / QA face?
+3. how do you like the velocity of the team deliverying the features?
