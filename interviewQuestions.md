@@ -43,3 +43,50 @@ Coding Exercise
 
 **4. write a function to transform data**
 =======
+
+## AWS
+**1. Q: Write a function which can parse the following text into your own data structure
+example 1
+{
+   k1 : v1
+   k2 : {
+       sk1 : sv1
+   }
+}
+
+example 2
+{
+    k1: v1
+    k2 : {
+        sk1 : {
+                
+        }
+    }
+}
+
+//
+
+public Object parse(String[] arr) {
+    Stack stk = new Stack();
+    Map root = new HashMap();
+    for (int i = 0; i < arr.length; i++) {
+        s = arr[i];
+        if (s.length() > 0 && s.indexOf("{") < 0) {
+            String[] token = s.split(":");
+            root.add(token[0], token[1]);
+        } else if (s.indexOf("{") > 0) {
+            String[] token = s.split(":");
+            ArrayList subArray = new ArrayList();
+            
+            String nextLine = arr[++i];
+            while (nextLine.indexOf("}") < 0) {
+                subArray.add(nextLine);
+                nextLine=arr[++i];
+            }
+            root.add(token[0], prase(subArray));
+        }
+    }
+}
+
+**2. write a function that will compare 2 version numbers in String type.  for example: 1.3 vs 1.2.3
+
