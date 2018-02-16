@@ -42,9 +42,9 @@ Coding Exercise
 **3. Write a method to extract value out of json response. For example: get_value("sleep_time") or get_value("trending.style.time")**
 
 **4. write a function to transform data**
-=======
 
 ## AWS Round 1
+
 **1. Q: Write a function which can parse the following text into your own data structure
 example 1
 {
