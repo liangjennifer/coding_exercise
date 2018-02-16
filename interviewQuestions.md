@@ -46,47 +46,47 @@ Coding Exercise
 ## AWS Round 1
 
 **1. Q: Write a function which can parse the following text into your own data structure
-example 1
-{
-   k1 : v1
-   k2 : {
-       sk1 : sv1
-   }
-}
+example 1<br>
+{<br>
+   k1 : v1<br>
+   k2 : {<br>
+       sk1 : sv1<br>
+   }<br>
+}<br>
 
-example 2
-{
-    k1: v1
-    k2 : {
-        sk1 : {
-                
-        }
-    }
-}
+example 2<br>
+{<br>
+    k1: v1<br>
+    k2 : {<br>
+        sk1 : {<br>
+                <br>
+        }<br>
+    }<br>
+}<br>
 
-//
 
-public Object parse(String[] arr) {
-    Stack stk = new Stack();
-    Map root = new HashMap();
-    for (int i = 0; i < arr.length; i++) {
-        s = arr[i];
-        if (s.length() > 0 && s.indexOf("{") < 0) {
-            String[] token = s.split(":");
-            root.add(token[0], token[1]);
-        } else if (s.indexOf("{") > 0) {
-            String[] token = s.split(":");
-            ArrayList subArray = new ArrayList();
-            
-            String nextLine = arr[++i];
-            while (nextLine.indexOf("}") < 0) {
-                subArray.add(nextLine);
-                nextLine=arr[++i];
-            }
-            root.add(token[0], prase(subArray));
-        }
-    }
-}
+
+public Object parse(String[] arr) {<br>
+    Stack stk = new Stack();<br>
+    Map root = new HashMap();<br>
+    for (int i = 0; i < arr.length; i++) {<br>
+        s = arr[i];<br>
+        if (s.length() > 0 && s.indexOf("{") < 0) {<br>
+            String[] token = s.split(":");<br>
+            root.add(token[0], token[1]);<br>
+        } else if (s.indexOf("{") > 0) {<br>
+            String[] token = s.split(":");<br>
+            ArrayList subArray = new ArrayList();<br>
+            <br>
+            String nextLine = arr[++i];<br>
+            while (nextLine.indexOf("}") < 0) {<br>
+                subArray.add(nextLine);<br>
+                nextLine=arr[++i];<br>
+            }<br>
+            root.add(token[0], prase(subArray));<br>
+        }<br>
+    }<br>
+}<br>
 
 **2. write a function that will compare 2 version numbers in String type.  for example: 1.3 vs 1.2.3
 
@@ -94,19 +94,19 @@ public Object parse(String[] arr) {
 
 ## AWS Round 2
 **1. Q: Given a dictionary input {employee, manager}, write a data structure to store the data, and a function to print out the direct report. 
-Input example: 
-{"A", "C"},
-{"B", "C"},
-{"E", "G"},
-{"C", "F"},
-{"G", "F"},
-{"F", "F"}
-Output exmaple:
-A - []
-B - []
-C - [A, B]
-G - [E]
-F - [A,B,C,E,G]
+Input example: <br>
+{"A", "C"},<br>
+{"B", "C"},<br>
+{"E", "G"},<br>
+{"C", "F"},<br>
+{"G", "F"},<br>
+{"F", "F"}<br>
+Output exmaple:<br>
+A - []<br>
+B - []<br>
+C - [A, B]<br>
+G - [E]<br>
+F - [A,B,C,E,G]<br>
 
 
 
