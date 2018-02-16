@@ -44,7 +44,7 @@ Coding Exercise
 **4. write a function to transform data**
 =======
 
-## AWS
+## AWS Round 1
 **1. Q: Write a function which can parse the following text into your own data structure
 example 1
 {
@@ -89,4 +89,24 @@ public Object parse(String[] arr) {
 }
 
 **2. write a function that will compare 2 version numbers in String type.  for example: 1.3 vs 1.2.3
+
+
+
+## AWS Round 2
+**1. Q: Given a dictionary input {employee, manager}, write a data structure to store the data, and a function to print out the direct report. 
+Input example: 
+{"A", "C"},
+{"B", "C"},
+{"E", "G"},
+{"C", "F"},
+{"G", "F"},
+{"F", "F"}
+Output exmaple:
+A - []
+B - []
+C - [A, B]
+G - [E]
+F - [A,B,C,E,G]
+
+
 
